@@ -5,33 +5,42 @@ import Newnavbar from "../components/newnavbar";
 
 import LandingPageImg from "../assets/images/landing.svg";
 
-const Landing = ()=>{
-    return (
-        <>
-        <Newnavbar/>
-            <div className="py-24 w-100" style={{width:"100%",}}> 
-                <br/>
-                <div className="d-flex flex-column font-link align-items-center my-3">
-                    <h1 className=" display-1 " style={{fontWeight:"bolder", marginBottom:"60px"}} >AI Interview Test</h1>
-                   
+const Landing = () => {
+  return (
+    <>
+      <Newnavbar />
 
-                    <p className="fs-4 "style={{marginBottom:"60px"}} >Test  &  Develope  Your  Interview   Skills</p>
+      <div className="container py-5" style={{ backgroundColor: "#f8f9fa", borderRadius: "20px" }}>
+        <div className="d-flex flex-column align-items-center text-center my-5">
+          <h1 className="display-2 text-primary fw-bold mb-4">
+            AI Interview Test
+          </h1>
+          <p className="fs-4 text-secondary mb-4">
+            Test & Develop Your Interview Skills
+          </p>
 
-                    <Link to="/video">
-                    <button type="button" class="btn btn-outline-dark py-2">Get Started</button>
-                    </Link>
+          <Link to="/video">
+            <button
+              type="button"
+              className="btn btn-primary btn-lg py-3 px-5 rounded-pill shadow-sm"
+            >
+              Get Started
+            </button>
+          </Link>
+        </div>
 
-                </div>  
+        <div className="landing-img text-center my-5">
+          <img
+            src={LandingPageImg}
+            className="img-fluid"
+            alt="Landing Illustration"
+          />
+        </div>
+      </div>
 
-                <div >
-                    <div class="landing-img" style={{width:"100%"}}>
-                        <img src={LandingPageImg} style={{width:"100%" , height:"600px"}} alt="Landing" />
-                    </div>
-                </div>
-            </div>
-            <Footer/>
-        </>
-    );
-}
+      <Footer />
+    </>
+  );
+};
 
 export default Landing;
